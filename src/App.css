@@ -1,0 +1,304 @@
+body {
+  background-color: #161616;
+  color: #fff;
+}
+
+/* header */
+.header {
+  background-color: #111;
+  color: #fff;
+  padding: 27px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px; /* Set height as needed */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu ul li {
+  margin-right: 20px;
+}
+
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.phone, .mail {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-info span {
+  font-size: 14px;
+}
+
+/* video */
+.video-section {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.video-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+}
+
+.video-section .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.video-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.video-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.video-section button {
+  background-color: #faa805;
+  color: #161616;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .video-section h1 {
+      font-size: 2rem;
+  }
+  .video-section p {
+      font-size: 1.2rem;
+  }
+  .video-section button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+  .video-section {
+    width: unset;
+  }
+
+}
+
+.private-events-section {
+  display: flex;
+}
+
+.private-events-section .content {
+  flex: 1;
+  padding: 20px;
+}
+
+.private-events-section .content div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.private-events-section .content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #faa805;
+}
+
+.private-events-section .content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.private-events-section .content button {
+  background-color: #faa805;
+  color: #111;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+}
+
+.private-events-section .carpic {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Slide Show section styles */
+.slideshow-section {
+  padding: 80px 0;
+  background-color: #111; /* Set the background color as desired */
+  color: #fff; /* Set text color to white */
+  text-align: center;
+}
+
+.slideshow-section .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slideshow-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.slideshow-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.each-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Set height as desired */
+}
+
+.each-slide > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Tailored solutions section */
+.tailored-solutions-section {
+  padding: 80px 0;
+  background-color: #111; /* Set the background color as desired */
+  color: #fff; /* Set text color to white */
+  text-align: center;
+}
+
+.tailored-solutions-section .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tailored-solutions-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tailored-solutions-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* logos */
+.logos-section {
+  padding: 80px 0;
+  background-color: #111; /* Set the background color as desired */
+  text-align: center;
+}
+
+.logos-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logos-section .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logos-section .col {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-section img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logos-section .row {
+      flex-direction: column;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  height: 50px; /* Set height as needed */
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
