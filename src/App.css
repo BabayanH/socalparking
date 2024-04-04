@@ -1,31 +1,41 @@
 body {
+  margin: 0;
+
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #161616;
   color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family: "Crimson Text", serif;
 }
 
-/* header */
 .header {
-  background-color: #111;
+  background-color: #000;
   color: #fff;
-  padding: 27px 50px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 50px; /* Set height as needed */
+  height: 70px;
 }
 
 .menu ul {
   list-style-type: none;
+  display: flex;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
 .menu ul li {
-  margin-right: 20px;
+  margin-right: 70px;
 }
 
 .menu ul li:last-child {
@@ -33,41 +43,104 @@ body {
 }
 
 .menu ul li a {
-  color: #fff;
+  color: #faa805;
   text-decoration: none;
+  font-size: 24px; /* Increased font size */
+  padding: 10px 15px; /* Added padding */
+  display: inline-block; /* Allows padding to take effect */
 }
 
-.contact-info {
+.contact-about {
   display: flex;
   align-items: center;
 }
 
-.phone, .mail {
+.contact-section form div {
+  margin-bottom: 15px;
+  color: #fff; /* Text color */
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: 50%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #333; /* Darker background for the inputs */
+  border: 1px solid #faa805; /* A border to make the inputs stand out */
+  color: #fff; /* White text */
+  font-size: 16px; /* Adjust as needed */
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: #fff; /* White placeholder text */
+}
+
+.contact-section button {
+  background-color: #faa805;
+  color: #161616;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust button font size as needed */
+  margin-top: 10px;
+}
+
+.phone,
+.mail {
   margin-right: 20px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.contact-info span {
+.contact-about span {
   font-size: 14px;
 }
+.contact-section {
+  text-align: center;
+  background-color: #111; /* Set the background color as desired */
 
-/* video */
+  padding: 20px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 10px;
+  color: #000; /* or any color you prefer */
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.contact-link:hover {
+  color: #faa805; /* Change color on hover */
+}
+
+.contact-section p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact-section h2 {
+  color: #faa805;
+  font-family: "Licorice", cursive;
+}
 .video-section {
   position: relative;
-  height: 60vh;
+  width: 100%; /* Full width */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   overflow: hidden;
-  width: 100vw;
 }
 
 .video-section video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain; /* Ensures entire video is visible */
 }
 
 .video-section .overlay {
@@ -108,23 +181,6 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .video-section h1 {
-      font-size: 2rem;
-  }
-  .video-section p {
-      font-size: 1.2rem;
-  }
-  .video-section button {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-  }
-  .video-section {
-    width: unset;
-  }
-
-}
-
 .private-events-section {
   display: flex;
 }
@@ -147,6 +203,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #faa805;
+  font-family: "Licorice", cursive;
 }
 
 .private-events-section .content p {
@@ -171,77 +228,60 @@ body {
   object-fit: cover;
 }
 
-/* Slide Show section styles */
-.slideshow-section {
-  padding: 80px 0;
-  background-color: #111; /* Set the background color as desired */
-  color: #fff; /* Set text color to white */
-  text-align: center;
-}
-
-.slideshow-section .content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.slideshow-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.slideshow-section p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.slideshow-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.each-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px; /* Set height as desired */
-}
-
-.each-slide > div {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-
 /* Tailored solutions section */
-.tailored-solutions-section {
+.about-section {
   padding: 80px 0;
   background-color: #111; /* Set the background color as desired */
   color: #fff; /* Set text color to white */
   text-align: center;
 }
 
-.tailored-solutions-section .content {
+.about-section .content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.tailored-solutions-section h2 {
+.about-section h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color: #faa805;
+  font-family: "Licorice", cursive;
 }
 
-.tailored-solutions-section p {
+.about-section p {
   font-size: 1rem;
   margin-bottom: 20px;
   text-align: justify;
+}
+.services-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+  background-color: #111; /* Light background to make icons pop */
+  color: #faa805; /* Dark text for contrast */
+}
+
+.services-description {
+  color: #fff; /* Adjust color */
+  text-align: center; /* Center align text */
+  margin: 20px 0; /* Add some margin for spacing */
+  font-size: 18px; /* Adjust font size */
+}
+
+.service {
+  flex-basis: 30%; /* Adjust based on your layout preference */
+  margin: 10px;
+}
+
+.service h2 {
+  margin-top: 10px; /* Spacing between icon and text */
 }
 
 /* logos */
 .logos-section {
   padding: 80px 0;
-  background-color: #111; /* Set the background color as desired */
   text-align: center;
 }
 
@@ -263,42 +303,143 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.logos-section img {
+.logos-section .col img {
   width: 100%;
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .logos-section .row {
-      flex-direction: column;
-  }
+.logos-section h2 {
+  color: #faa805;
+  font-family: "Licorice", cursive;
 }
 
-/* footer */
 .footer {
-  background-color: #111;
-  color: #fff;
-  padding: 20px 0;
+  background-color: #000;
+  color: #faa805;
   text-align: center;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.footer-logo img {
-  height: 50px; /* Set height as needed */
+.footer-contact {
+  flex: 1;
+  min-width: 300px; /* Ensures the content wraps correctly on smaller screens */
 }
 
-.footer-info p {
-  margin: 5px 0;
+.footer-contact a {
+  display: inline-block; /* Aligns items horizontally */
+  margin: 0 10px; /* Spacing between items */
+  color: #faa805;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-address {
+  text-align: right;
+  flex: 1;
 }
 
 .footer-bottom {
   margin-top: 20px;
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-address,
+  .footer-contact {
+    text-align: center;
+    flex-basis: 100%; /* Stacks the contact and address information on smaller screens */
+  }
+
+  .footer-address {
+    order: -1; /* Moves address above contact info on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu ul li {
+    margin-right: 20px; /* Reduced margin for mobile devices */
+  }
+
+  .menu ul li a {
+    font-size: 18px; /* Adjust font size as needed */
+    padding: 8px 10px; /* Adjust padding to better fit mobile screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-section .row {
+    flex-direction: column;
+  }
+}
+/* Adjust the form size on smaller screens */
+@media (max-width: 768px) {
+  .contact-section input[type="text"],
+  .contact-section input[type="email"],
+  .contact-section textarea {
+    width: 80%; /* Makes the input fields take up more width on smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .video-section h1,
+  .video-section p,
+  .video-section button {
+    /* Adjust font sizes as needed for smaller screens */
+    font-size: medium; /* Example, adjust specifically */
+  }
+  .video-section .content {
+    /* Adjust positioning, font sizes, and padding */
+    font-size: 14px; /* Example, adjust specifically */
+    padding: 10px; /* Adds some padding on smaller screens */
+  }
+  .video-section {
+    height: auto;
+    padding-top: 56.25%; /* Adjust this value based on your video's aspect ratio */
+  }
+  /* Adds padding around the About section content to prevent it from touching screen borders */
+  .about-section .content {
+    padding: 0 20px; /* Adds horizontal padding */
+  }
+  .video-section video {
+    width: auto; /* Allows video width to adjust to aspect ratio */
+    height: 100%; /* Makes video height responsive to container height */
+    min-width: none;
+    min-height: none;
+  }
+}
+@media (max-width: 768px) {
+  .private-events-section {
+    flex-direction: column; /* Stacks items vertically, image first */
+  }
+
+  .private-events-section .carpic img {
+    width: 100%; /* Ensures the image covers the full width */
+    height: auto; /* Keeps the aspect ratio of the image */
+    margin-bottom: 20px; /* Adds some space between the image and the text */
+  }
+}
+/* Additional media query for mobile devices */
+@media (max-width: 768px) {
+  .logos-section .col img {
+    width: 50%; /* Reduce width to 75% of its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo if needed */
+  }
+
+  /* If you want to adjust spacing between logos */
+  .logos-section .col {
+    padding: 10px 0; /* Add some vertical padding */
+  }
+}
