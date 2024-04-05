@@ -1,11 +1,11 @@
 import "./App.css";
-import valet_vid from "./valet.mp4";
-import carPic from "./valetimage.jpg";
+import valet_vid from "./socalvid.mp4";
+import carPic from "./vimg1.jpg";
 // import SlideshowSection from "./SlideshowSection.jsx";
 // import { Slide } from "react-slideshow-image";
 import carousel from "./carousel.png";
 import seaweed from "./seaweed.png";
-import iroha from "./iroha.webp";
+import iroha from "./iroha1.png";
 import palms from "./palms.png";
 import logo from "./assets/logo.jpg";
 import { FaPhone, FaEnvelope, FaInstagram } from "react-icons/fa";
@@ -84,34 +84,37 @@ function App() {
         <div className="overlay"></div>
 
         <div className="content">
-          <h1>SoCal Parking is Effortless and convenient for all occasions</h1>
-          <p>Efficient, reliable and professional service</p>
+          <p>
+            SoCal Parking: Where efficiency meets reliability and
+            professionalism.
+          </p>
+          {/* <p>Where efficiency meets reliability and professionalism.</p> */}
           {/* <button>Get Started</button> */}
         </div>
       </section>
       <section id="about" className="about-section" ref={aboutRef}>
         <div className="content">
-          <h2>Customized Valet Parking Solutions by SoCal Parking</h2>
+          <h2>Bespoke Valet Parking Services by SoCal Parking</h2>
           <p>
-            At SoCal Parking, we specialize in providing tailored valet parking
-            solutions to meet the unique needs of our clients. With years of
-            experience in the valet parking industry, we understand the
-            importance of providing efficient and professional parking services
-            to enhance the guest experience.
+            At SoCal Parking, we excel in crafting custom valet parking
+            solutions designed to cater to the distinct preferences of our
+            clientele. Our extensive experience in the valet parking domain
+            equips us with a profound understanding of the critical role
+            efficient and polished parking services play in augmenting the
+            overall guest experience.
           </p>
           <p>
-            Our team of skilled valet attendants is trained to handle parking
-            operations for a wide range of events and venues, including
-            weddings, corporate events, private parties, and more. Whether you
-            require valet services for a small gathering or a large-scale event,
-            we have the expertise and resources to ensure smooth parking
-            operations.
+            Our proficient team of valet attendants is adept at managing parking
+            logistics for an array of events and venues, from intimate weddings
+            and private parties to substantial corporate gatherings. Regardless
+            of the size or nature of your event, we possess the knowledge and
+            capabilities to ensure seamless parking management.
           </p>
           <p>
-            With SoCal Parking, you can trust us to deliver reliable valet
-            parking solutions that reflect the professionalism and quality of
-            your business. Contact us today to learn more about how we can
-            customize our valet services to meet your specific requirements.
+            Entrust your valet parking needs to SoCal Parking, where we are
+            committed to embodying the professionalism and excellence your
+            business stands for. Reach out to us to discover how we can tailor
+            our valet services to align with your unique needs.
           </p>
         </div>
       </section>
@@ -120,10 +123,10 @@ function App() {
         <div className="content">
           <div>
             <h2>Private Events</h2>
-            <p>Enhance your next event with our professional services.</p>
+            <p>Take your event to the next level with our expert services.</p>
             <p>
-              Elevate your event with our premium valet parking services, where
-              we make it easy fro your guests to get where they need to be
+              Transform your gathering with our elite valet parking services,
+              ensuring seamless and effortless access for all your guests.
             </p>
             <button onClick={scrollToContact}>Learn More</button>
           </div>
@@ -135,9 +138,10 @@ function App() {
 
       <section id="services" className="services-section" ref={servicesRef}>
         <p className="services-description">
-          SoCal Parking operates with next generation Technology, using
-          ticketless valet app. We also provide professional and satisfactory
-          shuttle service for our private events if requested.
+          SoCal Parking leverages cutting-edge technology, utilizing a
+          ticketless valet application for seamless service. Additionally, we
+          offer professional and top-tier shuttle services for our private
+          events when needed.
         </p>
         <div className="service">
           <FaShieldAlt size={50} />
@@ -168,20 +172,21 @@ function App() {
       <section className="logos-section">
         <div className="container">
           <div className="partners-text">
-            <h2>Trusted by many businesses. Here are some of our partners:</h2>
+            <h2>Here are some of our partners:</h2>
           </div>
           <div className="row">
-            <div className="col">
-              <img src={carousel} alt="Carousel Logo" />
-            </div>
             <div className="col">
               <img src={seaweed} alt="Seaweed Logo" />
             </div>
             <div className="col">
+              <img src={carousel} alt="Carousel Logo" />
+            </div>
+
+            <div className="col">
               <img src={iroha} alt="Iroha Logo" />
             </div>
             <div className="col">
-              <img src={palms} alt="Palms Logo" />
+              <img src={palms} alt="Palms Logo" id="palms-logo" />
             </div>
           </div>
           {/* <div className="row">
@@ -214,17 +219,12 @@ function App() {
 
       <section id="contact" className="contact-section" ref={contactRef}>
         <h2>Request A Quote</h2>
-        <form action="https://formspree.io/f/myyrbgge" method="POST">
+        <form action="https://formspree.io/f/moqgpqlg" method="POST">
           <div>
-            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder="Name" required />
           </div>
           <div>
-            <input
-              type="email"
-              name="_replyto"
-              placeholder="Your Email"
-              required
-            />
+            <input type="email" name="_replyto" placeholder="Email" required />
           </div>
           <div>
             <textarea

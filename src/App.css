@@ -321,35 +321,43 @@ body {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack children vertically */
+  padding: 10px;
 }
 
-.footer-contact {
-  flex: 1;
-  min-width: 300px; /* Ensures the content wraps correctly on smaller screens */
+.footer-contact,
+.footer-address {
+  width: 100%; /* Make children take full width of their parent */
+  text-align: center; /* Center text for these elements */
 }
 
+.footer-bottom {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center; /* Ensure this is here for text centering */
+}
+
+/* Ensure links within .footer-contact are also centered properly */
 .footer-contact a {
-  display: inline-block; /* Aligns items horizontally */
-  margin: 0 10px; /* Spacing between items */
+  margin: 0 5px; /* Adjust spacing around links as needed */
+  display: block; /* Make each link its own block for individual line placement */
   color: #faa805;
-  text-decoration: none;
 }
 
 .footer-contact a:hover {
   color: #fff;
 }
 
-.footer-address {
-  text-align: right;
-  flex: 1;
-}
-
 .footer-bottom {
   margin-top: 20px;
   width: 100%;
+}
+
+#palms-logo {
+  width: 150px; /* Adjust based on your preference */
+  height: auto; /* maintains the aspect ratio */
 }
 
 @media (max-width: 768px) {
@@ -363,8 +371,9 @@ body {
     flex-basis: 100%; /* Stacks the contact and address information on smaller screens */
   }
 
-  .footer-address {
-    order: -1; /* Moves address above contact info on smaller screens */
+  #palms-logo {
+    width: 180px; /* Adjust based on your preference */
+    height: auto; /* maintains the aspect ratio */
   }
 }
 
