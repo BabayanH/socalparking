@@ -96,25 +96,23 @@ function App() {
         <div className="content">
           <h2>Bespoke Valet Parking Services by SoCal Parking</h2>
           <p>
-            At SoCal Parking, we excel in crafting custom valet parking
-            solutions designed to cater to the distinct preferences of our
-            clientele. Our extensive experience in the valet parking domain
-            equips us with a profound understanding of the critical role
-            efficient and polished parking services play in augmenting the
-            overall guest experience.
+            At SoCal Parking, we are really good at creating valet parking
+            services that meet your specific needs. We have been in the valet
+            parking business for a long time, which means we understand how
+            important it is to offer services that make your guests experience
+            better.
           </p>
           <p>
-            Our proficient team of valet attendants is adept at managing parking
-            logistics for an array of events and venues, from intimate weddings
-            and private parties to substantial corporate gatherings. Regardless
-            of the size or nature of your event, we possess the knowledge and
-            capabilities to ensure seamless parking management.
+            Our skilled team is proficient in managing a wide range of parking
+            situations, from intimate weddings and private parties to large
+            corporate events, including the operation of parking structures. No
+            matter the scale or type of your event, we qre equipped to ensure
+            efficient parking management.
           </p>
           <p>
-            Entrust your valet parking needs to SoCal Parking, where we are
-            committed to embodying the professionalism and excellence your
-            business stands for. Reach out to us to discover how we can tailor
-            our valet services to align with your unique needs.
+            Trust us with your valet parking. We are all about delivering the
+            high-quality service your business deserves. Get in touch to see how
+            we can customize our valet services just for you.
           </p>
         </div>
       </section>
