@@ -106,7 +106,7 @@ function App() {
             Our skilled team is proficient in managing a wide range of parking
             situations, from intimate weddings and private parties to large
             corporate events, including the operation of parking structures. No
-            matter the scale or type of your event, we qre equipped to ensure
+            matter the scale or type of your event, we are equipped to ensure
             efficient parking management.
           </p>
           <p>
