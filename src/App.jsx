@@ -259,7 +259,10 @@ function App() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 SoCal Parking. All Rights Reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} SoCal Parking. All Rights
+            Reserved.
+          </p>
         </div>
       </footer>
     </div>
